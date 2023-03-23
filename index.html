@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+          .wrapper_flex_center {
+            display: flex;
+            justify-content: center;
+        }
+        #right {
+            display: flex;
+            justify-content: right;
+        }
+        
+        #container {
+            display: flex;
+            width: 1440px;
+        }
+        
+        #left {
+            width: 90px;
+            height: 870px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        #left_above {
+            margin-top: 20px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        #below {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .item {
+            width: 32px;
+            margin-top: 50px;
+        }
+        .item_center{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 20px;
+        }
+        .item_margin{
+            margin-right: 10px;
+        }
+        #setting {
+            margin-top: 36px;
+        }
+        
+        #Logo {
+            width: auto;
+        }
+        
+        .column_line {
+            padding-right: 10px;
+            border-right: 0.1px solid rgba(15, 14, 14, 0.2);
+            height: 900px;
+        }
+        #top_title{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        #time{
+            display: flex;
+            border: 2px solid rgb(234,97,97);
+            border-radius: 20px;
+            width: 100px;
+            height: 40px;
+            justify-content: center;
+            align-items: center;
+            color: rgb(234,97,97);
+        }
+        #top_time{
+            display: flex;
+        }
+        #top1{
+            display: flex;
+            width: 90px;
+            height: 30px;
+            border-radius: 20px;
+            background-color: rgb(234, 97, 97);
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 15px;
+        }
+        #display_screen{
+            position: relative;
+            width: 100%;
+        }
+        #radius_img{
+            border-radius: 5px;
+            width: 100%;
+        }
+        .text_online{
+            color: lime;
+            margin-right: 10px;
+        }
+        .online{
+            background-color: grey;
+            position: absolute;
+            left: 20%;
+            top: 13%;
+            display: flex;
+            height: auto;
+            width: auto;
+            color: white;
+            padding: 5px 10px 5px 5px;
+            border-radius: 5px;
+            justify-content: center;
+            align-items: center;
+        }
+        .voice{
+            position: absolute;
+            top: 13%;
+            right: 37%;
+        }
+     
+        .radius_img1{
+            display: flexbox;
+            justify-content: space-around;
+            border-radius: 5px;
+            width: 305px;
+            margin-top: 15px;
+        }
+
+        #img1{
+            display: flex;
+            border-radius: 5px 10px 5px 5px;
+        }
+
+        .online1{
+            background-color: rgba(0,0,0,0.5);
+            position: absolute;
+            display: flex;
+            height: auto;
+            width: auto;
+            color: white;
+            padding: 5px 10px 5px 5px;
+            border-radius: 5px;
+            justify-content: center;
+            top: 64%;
+            left: 20%;
+        }
+        .voice1{
+            position: absolute;
+            top: 64%;
+            left: 32%;
+            height: auto;
+            width: auto;
+        }
+
+        .online2{
+            background-color: rgba(0,0,0,0.5);
+            position: absolute;
+            display: flex;
+            height: auto;
+            width: auto;
+            padding: 5px 10px 5px 5px;
+            justify-content: center;
+            border-radius: 5px;
+            color: white;
+            top: 64%;
+            left: 35%;
+        }
+        .voice2{
+            position: absolute;
+            top: 64%;
+            left: 47%;
+        }
+        .online3{
+            display: flex;
+            position: absolute;
+            padding: 5px 10px 5px 5px;
+            border-radius: 5px;
+            height: auto;
+            width: auto;
+            color: white;
+            background-color: rgba(0,0,0,0.5);
+            top: 64%;
+            left: 50%;
+        }
+        .voice3{
+            position: absolute;
+            top: 64%;
+            left: 61.9%;
+        }
+        #center_last{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+       #end_meeting{
+        display: flex;
+        position: absolute;
+        padding: 15px 10px 15px 15px;
+        border-radius: 5px;
+        color: white;
+        background-color: red;
+        width: auto;
+        height: auto;
+       }
+      
+       #top_title_right{
+            display: flex;
+            position: absolute;
+            top: 10%;
+            left: 70%;
+       }
+       #right{
+        width: 440px;
+        height: 870px;
+        display: flex;
+        flex-direction: column;
+       }
+       #right_top{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+       }
+       .title_top{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       }
+       .warpper_flex_space_between{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+       }
+       .box{
+        display: flex;
+        position: absolute;
+        top: 1.5%;
+        left: 73%;
+        border-radius: 5px;
+        background-color: rgb(244, 204, 204);
+        color: rgb(198, 15, 15);
+        height: auto;
+        width: auto;
+        justify-content: center;
+        padding: 2px 4px 3px 3px;
+       }
+
+       #add_button{
+        display: flex;
+       position: absolute;
+       border-radius: 5px;
+       background-color: aliceblue;
+       color: rgb(229, 96, 96);
+       border: 1px solid rgb(209, 54, 54);
+       padding: 15px 35px 15px 15px;
+       height: auto;
+       width: auto;
+       top: 3%;
+       left: 80%;
+       }
+       #right_below{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 27px;
+       }
+       #right_below_left{
+        display: flex;
+       }
+       .benjamin_Crawford{
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 12.5%;
+        left: 66.5%;
+       }
+       .Christian_Scott{
+        display: flex;
+        position: absolute;
+        top: 20%;
+        left: 66.5%;
+       }     
+       .Deborah_Chu{
+        display: flex;
+        position: absolute;
+        top: 27.5%;
+        left: 66.5%;
+       }
+      .Jordan_Nieves{
+        display: flex;
+        position: absolute;
+        top: 35%;
+        left: 66.5%;
+      }
+      #line_last{
+            border-bottom: 2px solid rgba(15, 14, 14, 0.2);
+           margin-top: 10px;
+      }
+      #txt_chat{
+        display: flex;
+        margin-top: 20px;
+        margin-left: 20px;
+      }
+      #chat_last{
+        display: flex;
+      }
+      .Deborah_Chu1{
+        display: flex;
+        position: absolute;
+        top: 48.5%;
+        left: 66.5%;
+      }
+     .gio_last{
+        display: flex;
+        position: absolute;
+        
+        left: 110%;
+     }
+     .input_class{
+        display: flex;
+        margin-top: 5px;
+        margin-left: 50px;
+     }
+     .comment{
+        display: flex;
+        border-radius: 5px;
+        margin-left: 45px;
+        height: auto;
+        width: auto;
+        background-color: aliceblue;
+        padding: 10px 10px 10px 10px;
+     }
+     .Jordan_Nieves1{
+        display: flex;
+        position: absolute;
+        top: 58%;
+        left: 66.5%;
+     }
+     .Benjamin_Crawford2{
+        isplay: flex;
+        position: absolute;
+        top: 68%;
+        left: 66.5%;
+     }
+     .gio_last{
+        isplay: flex;
+        position: absolute;
+        top: 0%;
+        left: 110%;
+     }
+     .comment1{
+        display: flex;
+        border-radius: 5px;
+        margin-left: 45px;
+        height: auto;
+        width:30%;
+        background-color: aliceblue;
+        padding: 5px 5px 5px 5px;
+     }
+     #input_text{
+        display: flex;
+        margin-left: 43px;
+        margin-top: 15px;
+     }
+     #last{
+        display: flex;
+     }
+     #send{
+        display: flex;
+        position: absolute;
+        top: 75%;
+        left: 82%;
+     }
+    </style>
+</head>
+
+    <body>
+        <div class="wrapper_flex_center">
+            <div id="container">
+                <div id="left" class="column_line">
+                    <div id="left_above">
+                        <img class="Logo" src="logo.png" alt="">
+                        <img class="item" src="home.png" alt="">
+                        <img class="item" src="chatting.png" alt="">
+                        <img class="item" src="calender.png" alt="">
+                        <img class="item" src="cam.png" id="" alt="">
+                        <img class="item" src="user.png" id="" alt="">
+                    </div>
+    
+                    <div id="below">
+                        <img src="avatar.png" width="44" alt="">
+                        <img id="setting" src="setting.png" width="60" alt="">
+                    </div>
+                </div>
+        <div id="center">
+            <div id="top_title">
+                <h1>Meeting title</h1>
+                <div id="time">&#x25cf; 12:00</div>
+            </div>
+            <div id="top_time">
+                <div id="top1" class="item_center"><img src="user.png" alt="" width="20px">Internal</div>
+                <div class="item_center"><img src="calender_small.png" alt="">Sep 02, 2022</div>
+                <div class="item_center">08:00 - 09:000 AM</div>
+            </div>
+            <div id="mid">
+                <div class="display_screen">
+                    <div id="big_img">
+                        <img src="img_big.png" alt="" height="500px" class="radius_img" >
+                    </div>
+                    <div class="online"><div class="text_online">&#x25cf;</div>Benjamin Crawford</div>
+                      <div>
+                        <img src="mic_color.png" alt="" class="voice">
+                      </div>
+                    </div>
+            </div>
+            <div class="wrapper_flex_center" id="center_mid_small">
+                <div class="display_screen">
+                    <div id="img">
+                        <img src="img2.png" alt="" class="radius_img1">
+                    </div>
+                    <div class="online1"><div class="text_online">&#x25cf;</div>Christian Scott</div>
+                    <div><img src="mic_grey_color.png" alt="" class="voice1"></div>
+                </div>
+                <div class="display_screen">
+                    <div id="img1">
+                        <img src="img1.png" alt="" class="radius_img1">
+                    </div>
+                    <div class="online2"><div class="text_online">&#x25cf;</div>Deborah Chu</div>
+                    <div><img src="mic_grey_color.png" alt="" class="voice2"></div>
+                </div>
+                <div class="display_screen">
+                    <div id="img">
+                        <img src="img.png" alt="" class="radius_img1">
+                    </div>
+                    <div class="online3"><div class="text_online">&#x25cf;</div>Jordan Nieves</div>
+                    <div><img src="mic_grey_color.png" alt="" class="voice3"></div>
+                </div>
+            </div>
+            <div id="center_last">
+                <div><img src="mic_grey_color.png" alt=""></div> &emsp;
+                <div><img src="cam_color.png" alt=""></div>&emsp;
+                <div><img src="speaker_grey_color.png" alt=""></div>&emsp;&emsp;&emsp;&emsp;
+                <div id="end_meeting">End meeting</div>&emsp;&emsp;&emsp;&emsp;
+                <div><img src="Button 2179.png" alt=""></div>&emsp;
+                <div><img src="share.png" alt=""></div>&emsp;
+                <div><img src="ellipsis.png" alt=""></div>
+            </div>
+            </div>
+            <div id="right">
+                <div id="right_top">
+                    <div id="title_top" class="warpper_flex_space_between">
+                        <h1 id="Participants_title">Participants </h1>
+                        <h2 class="box">4</h2>
+                        <div id="add_button">+ Add</div>
+                    </div>
+                </div>
+                <div id="right_below">
+                    <div id="right_below_right">
+                        <div ><img src="avatar 1322.png" alt=""></div>
+                        <div class="benjamin_Crawford">benjamin Crawford</div>
+                    </div>
+                    <div id="right_below_left">
+                        <div><img src="mic1.png" alt=""></div>&emsp;
+                        <div><img src="cam_small.png" alt=""></div>&emsp;
+                        <div><img src="ellipsis.png" alt=""></div>
+                    </div>                   
+                </div>
+                <div id="right_below">
+                    <div id="right_below_right1">
+                        <div ><img src="avatar 1323.png" alt=""></div>
+                        <div class="Christian_Scott">Christian Scott</div>
+                    </div>
+                    <div id="right_below_left">
+                        <div><img src="mic1.png" alt=""></div>&emsp;
+                        <div><img src="cam_small.png" alt=""></div>&emsp;
+                        <div><img src="ellipsis.png" alt=""></div>
+                    </div>
+                </div>
+                <div id="right_below">
+                    <div id="right_below_right2">
+                        <div ><img src="avatar 1324.png" alt=""></div>
+                        <div class="Deborah_Chu">Deborah Chu</div>
+                    </div>
+                    <div id="right_below_left">
+                        <div><img src="mic2.png" alt=""></div>&emsp;
+                        <div><img src="cam_small.png" alt=""></div>&emsp;
+                        <div><img src="ellipsis.png" alt=""></div>
+                    </div>
+            </div>
+            <div id="right_below">
+                <div id="right_below_right3">
+                    <div ><img src="avatar 1325.png" alt=""></div>
+                    <div class="Jordan_Nieves">Jordan Nieves</div>
+                </div>
+                <div id="right_below_left">
+                    <div><img src="mic1.png" alt=""></div>&emsp;
+                    <div><img src="cam_small.png" alt=""></div>&emsp;
+                    <div><img src="ellipsis.png" alt=""></div>
+                </div>
+        </div>
+        <div id="line_last">  
+        </div>
+        <div>
+            <h1 id="txt_chat">Chat</h1>
+        </div>
+        <div id="chat_last">
+            <div><img src="avatar 1324.png" alt=""></div>
+            <div class="Deborah_Chu1"><b>Deborah Chu</b>  <div class="gio_last">1:12PM</div></div>
+        </div>
+        <div class="comment">
+             Lorem excepteur magna voluptate exercitation <br>
+             dolore exercitation arnet
+        </div>
+
+        <div id="chat_last">
+            <div><img src="avatar 1325.png" alt=""></div>
+            <div class="Jordan_Nieves1"><b>Jordan Nieves</b>  <div class="gio_last">1:12PM</div></div>
+        </div>
+        <div class="comment" >
+             Eiusmod laborum culpa est magna cillum sint <br>
+             in elit proident magna anim consecte
+        </div>
+        <div id="chat_last">
+            <div><img src="avatar 1322.png" alt=""></div>
+            <div class="Benjamin_Crawford2"><b>Benjamin Crawford</b><div class="gio_last">1:12PM</div></div>
+        </div>
+        <div class="comment1" >
+            😍😍😍
+        </div>
+        <div id="last">
+            <div>
+                <input type="text" id="input_text" placeholder="Typing..." size="40" style="height: 30px;">
+            </div>
+            <div id="send">
+                <img src="send.png" alt="">
+            </div>
+        </div>
+        </div>  
+ </body>
